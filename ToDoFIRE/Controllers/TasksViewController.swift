@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,6 +17,10 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     @IBAction func addTaskPressed(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

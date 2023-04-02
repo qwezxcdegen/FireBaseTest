@@ -43,7 +43,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jgz-cT-VzS"/>
-                                            <segue destination="G18-cK-0dV" kind="presentation" identifier="tasksSegue" modalPresentationStyle="fullScreen" id="cVm-kD-G5B"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mw3-Gy-T2f">
@@ -97,6 +96,7 @@
                         <outlet property="emailTF" destination="sf1-Kd-A7d" id="NRl-jJ-xQD"/>
                         <outlet property="passwordTF" destination="lPf-5s-PdX" id="aAI-oF-xRR"/>
                         <outlet property="warningLabel" destination="Pr4-v8-M0a" id="P1P-Iv-mCV"/>
+                        <segue destination="G18-cK-0dV" kind="presentation" identifier="tasksSegue" modalPresentationStyle="fullScreen" id="Ceh-uE-7xL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -142,6 +142,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5ac-gc-wyR">
+                        <barButtonItem key="leftBarButtonItem" title="logout" id="UZR-cg-xmc">
+                            <connections>
+                                <action selector="logoutPressed:" destination="MAz-az-tWK" id="CF4-Ck-EJb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kes-2j-iX9">
                             <connections>
                                 <action selector="addTaskPressed:" destination="MAz-az-tWK" id="Xwz-5H-s0L"/>

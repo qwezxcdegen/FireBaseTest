@@ -19,6 +19,11 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         warningLabel.alpha = 0
         FirebaseApp.configure()
+        let listener = FirebaseAuth.Auth.auth().addStateDidChangeListener { auth, user in
+            if user != nil {
+                self.performSegue(withIdentifier: "tasksSegue", sender: nil)
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -31,16 +36,41 @@ final class LoginViewController: UIViewController {
             displayWarningLabel(with: "Data is incorrect")
             return
         }
-        FirebaseApp.
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { user, error in
+            if error != nil {
+                self.displayWarningLabel(with: "Error occured")
+                return
+            }
+            if user != nil {
+                print("GOOD")
+                self.performSegue(withIdentifier: "tasksSegue", sender: nil)
+                return
+            }
+            self.displayWarningLabel(with: "No such user")
+        }
     }
     
     @IBAction func registerPressed(_ sender: UIButton) {
-        displayWarningLabel(with: "qwe")
+        guard let email = emailTF.text, let password = passwordTF.text, email != "", password != "" else {
+            displayWarningLabel(with: "Enter correct data to register")
+            return
+        }
+        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { user, error in
+            guard error == nil else {
+                self.displayWarningLabel(with: "User is exist")
+                return
+            }
+            guard user != nil else {
+                self.displayWarningLabel(with: "Error")
+                return
+            }
+            self.performSegue(withIdentifier: "tasksSegue", sender: nil)
+        }
     }
     
     private func displayWarningLabel(with text: String) {
         warningLabel.text = text
-        UIView.animate(withDuration: 3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 2, initialSpringVelocity: 2, animations: {
             self.warningLabel.alpha = 1
         }) { _ in
             self.warningLabel.alpha = 0

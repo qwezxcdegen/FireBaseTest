@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07541E0329D9C5D900B740BF /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07541E0229D9C5D900B740BF /* TasksViewController.swift */; };
+		07541E0729D9C9D900B740BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07541E0629D9C9D800B740BF /* GoogleService-Info.plist */; };
 		07DF37A529D9BC2400C9E6CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DF37A429D9BC2400C9E6CC /* AppDelegate.swift */; };
 		07DF37A729D9BC2400C9E6CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DF37A629D9BC2400C9E6CC /* SceneDelegate.swift */; };
-		07DF37A929D9BC2400C9E6CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DF37A829D9BC2400C9E6CC /* ViewController.swift */; };
+		07DF37A929D9BC2400C9E6CC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DF37A829D9BC2400C9E6CC /* LoginViewController.swift */; };
 		07DF37AC29D9BC2400C9E6CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DF37AA29D9BC2400C9E6CC /* Main.storyboard */; };
 		07DF37AE29D9BC2600C9E6CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07DF37AD29D9BC2600C9E6CC /* Assets.xcassets */; };
 		07DF37B129D9BC2600C9E6CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DF37AF29D9BC2600C9E6CC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07541E0229D9C5D900B740BF /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		07541E0629D9C9D800B740BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07DF37A129D9BC2400C9E6CC /* ToDoFIRE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoFIRE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07DF37A429D9BC2400C9E6CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07DF37A629D9BC2400C9E6CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		07DF37A829D9BC2400C9E6CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		07DF37A829D9BC2400C9E6CC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		07DF37AB29D9BC2400C9E6CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07DF37AD29D9BC2600C9E6CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07DF37B029D9BC2600C9E6CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +41,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07541E0429D9C66600B740BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07541E0629D9C9D800B740BF /* GoogleService-Info.plist */,
+				07DF37A429D9BC2400C9E6CC /* AppDelegate.swift */,
+				07DF37A629D9BC2400C9E6CC /* SceneDelegate.swift */,
+				07DF37AA29D9BC2400C9E6CC /* Main.storyboard */,
+				07DF37AD29D9BC2600C9E6CC /* Assets.xcassets */,
+				07DF37AF29D9BC2600C9E6CC /* LaunchScreen.storyboard */,
+				07DF37B229D9BC2600C9E6CC /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07541E0529D9C67600B740BF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				07DF37A829D9BC2400C9E6CC /* LoginViewController.swift */,
+				07541E0229D9C5D900B740BF /* TasksViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		07DF379829D9BC2400C9E6CC = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +83,8 @@
 		07DF37A329D9BC2400C9E6CC /* ToDoFIRE */ = {
 			isa = PBXGroup;
 			children = (
-				07DF37A429D9BC2400C9E6CC /* AppDelegate.swift */,
-				07DF37A629D9BC2400C9E6CC /* SceneDelegate.swift */,
-				07DF37A829D9BC2400C9E6CC /* ViewController.swift */,
-				07DF37AA29D9BC2400C9E6CC /* Main.storyboard */,
-				07DF37AD29D9BC2600C9E6CC /* Assets.xcassets */,
-				07DF37AF29D9BC2600C9E6CC /* LaunchScreen.storyboard */,
-				07DF37B229D9BC2600C9E6CC /* Info.plist */,
+				07541E0529D9C67600B740BF /* Controllers */,
+				07541E0429D9C66600B740BF /* Supporting Files */,
 			);
 			path = ToDoFIRE;
 			sourceTree = "<group>";
@@ -126,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07DF37B129D9BC2600C9E6CC /* LaunchScreen.storyboard in Resources */,
+				07541E0729D9C9D900B740BF /* GoogleService-Info.plist in Resources */,
 				07DF37AE29D9BC2600C9E6CC /* Assets.xcassets in Resources */,
 				07DF37AC29D9BC2400C9E6CC /* Main.storyboard in Resources */,
 			);
@@ -138,7 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07DF37A929D9BC2400C9E6CC /* ViewController.swift in Sources */,
+				07DF37A929D9BC2400C9E6CC /* LoginViewController.swift in Sources */,
+				07541E0329D9C5D900B740BF /* TasksViewController.swift in Sources */,
 				07DF37A529D9BC2400C9E6CC /* AppDelegate.swift in Sources */,
 				07DF37A729D9BC2400C9E6CC /* SceneDelegate.swift in Sources */,
 			);
@@ -289,7 +313,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SWCGQQGWMX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ToDoFIRE/Info.plist;
+				INFOPLIST_FILE = "ToDoFIRE/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,7 +344,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SWCGQQGWMX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ToDoFIRE/Info.plist;
+				INFOPLIST_FILE = "ToDoFIRE/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
